@@ -1,8 +1,29 @@
 {
   "name": "@howaboua/opencode-planning-toolkit",
   "version": "0.0.1",
-  "description": "Study Plan plugin for OpenCode",
+  "description": "Comprehensive planning toolkit for OpenCode: manage specifications, track study plans, and automate roadmaps.",
   "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "find . -name '*.js' ! -path './node_modules/*' -delete && find . -name '*.d.ts' ! -path './node_modules/*' -delete",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "opencode",
+    "plugin",
+    "planning",
+    "roadmap",
+    "specification",
+    "study-plan"
+  ],
+  "author": "Igor Warzocha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorWarzocha/opencode-planning-toolkit.git"
+  },
   "dependencies": {
     "@opencode-ai/plugin": "latest"
   },

@@ -1,0 +1,9 @@
+node_modules/
+*.js
+!index.js
+!hooks/index.js
+!tools/index.js
+*.d.ts
+.DS_Store
+bun.lock
+dist/
