@@ -44,7 +44,9 @@ export const getPlanPath = (directory: string, name: string) => getSecurePath(jo
 export const getSpecPath = (directory: string, name: string) => getSecurePath(join(directory, "docs/specs"), name)
 
 export const listPlans = async (directory: string) => {
-  const glob = new Bun.Glob(join(directory, "docs/plans/*.md"))
+  const plansDir = join(directory, "docs/plans")
+  if (!(await Bun.file(plansDir).exists())) return []
+  const glob = new Bun.Glob(join(plansDir, "*.md"))
   return Array.fromAsync(glob.scan())
 }
 

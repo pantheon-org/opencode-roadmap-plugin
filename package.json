@@ -1,6 +1,6 @@
 {
   "name": "@howaboua/opencode-planning-toolkit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Comprehensive planning toolkit for OpenCode: manage specifications, track study plans, and automate roadmaps.",
   "main": "index.ts",
   "type": "module",
