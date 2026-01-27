@@ -79,7 +79,9 @@ const writeWithMerge = async (path: string, spec: string) => {
 }
 
 const listRepoSpecs = async (directory: string) => {
-  const glob = new Bun.Glob(join(directory, "docs/specs/*.md"))
+  const specsDir = join(directory, "docs/specs")
+  if (!(await Bun.file(specsDir).exists())) return []
+  const glob = new Bun.Glob(join(specsDir, "*.md"))
   const files = await Array.fromAsync(glob.scan())
   const repoSpecs: string[] = []
   for (const file of files) {
